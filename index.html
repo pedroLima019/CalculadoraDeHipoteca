@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/css/vendor/reset.css" />
     <link rel="stylesheet" href="/src/css/global.css" />
+    <script src="src/scripts/calc.js" defer></script>
     <link
       rel="shortcut icon"
       href="src/assets/images/favicon-32x32.png"
@@ -26,17 +27,17 @@
               <form>
                 <div class="form-group">
                   <label for="amount">Quantidade Amortização</label>
-                  <input type="text" id="amount" name="amount" />
+                  <input type="text" id="amount" name="amount" required />
                 </div>
 
                 <div class="calculate-mort">
                   <div class="mort_temp">
                     <label for="term">Termo de Amortização</label>
-                    <input type="text" id="term" name="term" />
+                    <input type="text" id="term" name="term" required />
                   </div>
                   <div class="interest_rate">
                     <label for="rate">Taxa de juros</label>
-                    <input type="text" id="rate" name="rate" />
+                    <input type="text" id="rate" name="rate" required />
                   </div>
                 </div>
 
@@ -49,6 +50,7 @@
                         id="reembolso"
                         name="tipo"
                         value="reembolso"
+                        required
                       />
                       <label for="reembolso">Reembolso</label>
                     </div>
@@ -58,13 +60,19 @@
                         id="interesse"
                         name="tipo"
                         value="interesse"
+                        required
                       />
                       <label for="interesse">Somente Interesse</label>
                     </div>
                   </div>
                 </div>
                 <div class="btn-repayment">
-                  <button id="repayment">Calcular Reembolso</button>
+                  <button id="btnRepayment">
+                    <img
+                      src="src/assets/images/icon-calculator.svg"
+                      alt=""
+                    />Calcular Reembolso
+                  </button>
                 </div>
               </form>
             </div>
@@ -85,7 +93,10 @@
           <div class="result-container">
             <p>Seu rendimento mensal</p>
             <div id="result"></div>
-            <div id="totalTerm"></div>
+            <div id="totalTerm">
+              <p>Total termo de reembolso</p>
+              <p id="total"></p>
+            </div>
           </div>
         </section>
       </section>

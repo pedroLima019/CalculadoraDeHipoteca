@@ -7,7 +7,7 @@
 
 body {
   background: hsl(202, 86%, 94%);
-  padding: 2rem;
+  padding: 3rem;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -15,9 +15,8 @@ body {
 }
 
 .calculator-main {
-  width: 100%;
-  height: 100vh;
-  height: 600px;
+  width: 1000px;
+  height: 500px;
   background: #ffff;
   border-radius: 20px;
   box-shadow: 10px 20px 50px #0000006c;
@@ -171,18 +170,6 @@ body {
   margin: 0 10px;
 }
 
-.result-section {
-  width: 50%;
-  height: 600px;
-  color: #ffff;
-  padding: 2rem;
-  border-radius: 0 20px 20px 100px;
-  background: hsl(202, 55%, 16%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .btn-repayment {
   width: 100%;
   display: flex;
@@ -190,12 +177,84 @@ body {
 }
 
 .btn-repayment button {
-  width: 250px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
   font-size: 15px;
   font-weight: 500;
   border: none;
   padding: 0.5rem;
   border-radius: 10px;
-  background: hsl(61, 70%, 52%);
+  background: hsl(61, 70%, 50%);
   color: hsl(202, 55%, 16%);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-repayment button:hover {
+  background: hsl(61, 82%, 64%);
+}
+
+.btn-repayment img {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+}
+.result-section {
+  width: 50%;
+  height: 500px;
+  color: #ffff;
+  padding: 2rem;
+  border-radius: 0 20px 20px 70px;
+  background: hsl(202, 55%, 16%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-container {
+  margin: 10px 0;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.text-container h1 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.text-container p {
+  margin: 10px 0;
+}
+
+.result-container {
+  background-color: hsl(202, 76%, 4.9%);
+  box-shadow: 0px -3px 0px 0px hsl(61, 70%, 52%);
+  width: 100%;
+  height: 250px;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.result-container p {
+  font-weight: 200;
+  font-size: 12px;
+}
+
+#result {
+  font-size: 50px;
+  color: hsl(61, 70%, 52%);
+}
+
+#totalTerm {
+  border-top: 1px solid #ffffff3a;
+}
+
+#totalTerm p {
+  margin: 10px 0;
+}
+
+#totalTerm,
+#total {
+  font-size: 20px;
+  font-weight: 500;
 }
