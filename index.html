@@ -1,61 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/vendor/reset.css" />
+    <link rel="stylesheet" href="/src/css/global.css" />
+    <link
+      rel="shortcut icon"
+      href="src/assets/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <script src="src/scripts/calc.js" defer></script>
+    <title>Calculadora de Hipoteca</title>
+  </head>
+  <body>
+    <main class="calculator-main">
+      <section class="calculators">
+        <section class="section-calc">
+          <div class="calculator">
+            <div class="title-container">
+              <h3>Calculadora de Hipoteca</h3>
+              <a id="clear">Clear All</a>
+            </div>
+            <div class="calc-container">
+              <form>
+                <div class="form-group">
+                  <label for="amount">Quantidade Amortização</label>
+                  <input type="text" id="amount" name="amount" />
+                </div>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Mortgage repayment calculator</title>
+                <div class="calculate-mort">
+                  <div class="mort_temp">
+                    <label for="term">Termo de Amortização</label>
+                    <input type="text" id="term" name="term" />
+                  </div>
+                  <div class="interest_rate">
+                    <label for="rate">Taxa de juros</label>
+                    <input type="text" id="rate" name="rate" />
+                  </div>
+                </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Mortgage Calculator
-  Clear All
-
-  Mortgage Amount
-
-  Mortgage Term
-
-  Interest Rate
-
-  Mortgage Type
-  Repayment
-  Interest Only
-
-  Calculate Repayments
-
-  <!-- Empty results start -->
-
-  Results shown here
-
-  Complete the form and click “calculate repayments” to see what 
-  your monthly repayments would be.
-
-  <!-- Empty results end -->
-
-  <!-- Completed results start -->
-
-  Your results
-
-  Your results are shown below based on the information you provided. 
-  To adjust the results, edit the form and click “calculate repayments” again.
-
-  Your monthly repayments
-
-  Total you'll repay over the term
-
-  <!-- Completed results end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+                <div class="form-group">
+                  <h4>Tipo de Amortização</h4>
+                  <div class="type_mortage">
+                    <div class="repayment">
+                      <input
+                        type="radio"
+                        id="reembolso"
+                        name="tipo"
+                        value="reembolso"
+                      />
+                      <label for="reembolso">Reembolso</label>
+                    </div>
+                    <div class="interest">
+                      <input
+                        type="radio"
+                        id="interesse"
+                        name="tipo"
+                        value="interesse"
+                      />
+                      <label for="interesse">Somente Interesse</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn-repayment">
+                  <button id="repayment">Calcular Reembolso</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <section class="result-section">
+          <div class="text-container">
+            <h1>Seu Resultado</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur
+              alias earum officia distinctio. Reprehenderit alias, consectetur
+              officiis quibusdam natus molestiae cum dicta earum voluptatum,
+              consequatur non harum accusamus magni expedita laborum neque
+              labore sed dolores debitis nostrum provident fugit quam! Libero
+              quod quo velit autem dicta commodi error distinctio numquam.
+            </p>
+          </div>
+          <div class="result-container">
+            <p>Seu rendimento mensal</p>
+            <div id="result"></div>
+            <div id="totalTerm"></div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
 </html>
